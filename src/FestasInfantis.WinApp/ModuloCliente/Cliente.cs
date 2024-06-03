@@ -8,5 +8,6 @@ namespace FestasInfantis.WinApp.ModuloCliente
 {
     internal class Cliente
     {
+
     }
 }
