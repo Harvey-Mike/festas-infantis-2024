@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FestasInfantis.WinApp.ModuloDisconto
 {
-    internal class Disconto
+    internal class Desconto
     {
     }
 }
