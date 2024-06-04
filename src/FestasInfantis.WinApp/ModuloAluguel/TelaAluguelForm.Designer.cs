@@ -53,10 +53,13 @@
             dateTimePicker2 = new DateTimePicker();
             dateTimePicker1 = new DateTimePicker();
             tabPage2 = new TabPage();
+            label1 = new Label();
+            label5 = new Label();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
+            tabPage2.SuspendLayout();
             SuspendLayout();
             // 
             // txtId
@@ -211,7 +214,7 @@
             // lblCidade
             // 
             lblCidade.AutoSize = true;
-            lblCidade.Location = new Point(-6, 25);
+            lblCidade.Location = new Point(-3, 25);
             lblCidade.Name = "lblCidade";
             lblCidade.Size = new Size(59, 20);
             lblCidade.TabIndex = 8;
@@ -300,6 +303,8 @@
             // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(label5);
+            tabPage2.Controls.Add(label1);
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
@@ -307,6 +312,24 @@
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Dados do Alguel";
             tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(25, 27);
+            label1.Name = "label1";
+            label1.Size = new Size(44, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Cliente";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(25, 54);
+            label5.Name = "label5";
+            label5.Size = new Size(44, 15);
+            label5.TabIndex = 0;
+            label5.Text = "Cliente";
             // 
             // TelaAluguelForm
             // 
@@ -330,6 +353,8 @@
             groupBox2.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            tabPage2.ResumeLayout(false);
+            tabPage2.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -361,5 +386,7 @@
         private DateTimePicker dateTimePicker1;
         private Button btnCancelar;
         private Button btnGravar;
+        private Label label1;
+        private Label label5;
     }
 }
