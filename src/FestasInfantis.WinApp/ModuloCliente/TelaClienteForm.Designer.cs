@@ -73,7 +73,7 @@
             label2.Size = new Size(43, 15);
             label2.TabIndex = 2;
             label2.Text = "Nome:";
-            label2.Click += this.label2_Click;
+            
             // 
             // txtCPF
             // 
