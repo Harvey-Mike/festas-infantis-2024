@@ -28,28 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
-            label1 = new Label();
+            txtId = new TextBox();
+            lblId = new Label();
             label2 = new Label();
-            textBox3 = new TextBox();
             label3 = new Label();
-            textBox4 = new TextBox();
             label4 = new Label();
-            textBox2 = new TextBox();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            btnCancelar = new Button();
+            btnGravar = new Button();
             groupBox2 = new GroupBox();
-            label6 = new Label();
-            label7 = new Label();
-            label9 = new Label();
-            label8 = new Label();
-            label5 = new Label();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            textBox9 = new TextBox();
-            textBox8 = new TextBox();
-            textBox5 = new TextBox();
+            lblRua = new Label();
+            lblEstado = new Label();
+            lblNumero = new Label();
+            lblBairro = new Label();
+            lblCidade = new Label();
+            txtRua = new TextBox();
+            txtEstado = new TextBox();
+            txtNumero = new TextBox();
+            txtBairro = new TextBox();
+            txtCidade = new TextBox();
             groupBox1 = new GroupBox();
+            dateTimePicker3 = new DateTimePicker();
+            dateTimePicker2 = new DateTimePicker();
+            dateTimePicker1 = new DateTimePicker();
             tabPage2 = new TabPage();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
@@ -57,71 +59,52 @@
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
-            // textBox1
+            // txtId
             // 
-            textBox1.Enabled = false;
-            textBox1.Location = new Point(67, 23);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(54, 23);
-            textBox1.TabIndex = 0;
-            textBox1.Text = "0";
+            txtId.Enabled = false;
+            txtId.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtId.Location = new Point(67, 23);
+            txtId.Name = "txtId";
+            txtId.Size = new Size(54, 27);
+            txtId.TabIndex = 0;
+            txtId.Text = "0";
             // 
-            // label1
+            // lblId
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(41, 26);
-            label1.Name = "label1";
-            label1.Size = new Size(20, 15);
-            label1.TabIndex = 1;
-            label1.Text = "Id:";
+            lblId.AutoSize = true;
+            lblId.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblId.Location = new Point(41, 26);
+            lblId.Name = "lblId";
+            lblId.Size = new Size(25, 20);
+            lblId.TabIndex = 1;
+            lblId.Text = "Id:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(22, 52);
+            label2.Location = new Point(27, 56);
             label2.Name = "label2";
-            label2.Size = new Size(98, 15);
-            label2.TabIndex = 2;
+            label2.Size = new Size(124, 20);
+            label2.TabIndex = 4;
             label2.Text = "Horário de Início:";
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(127, 15);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 3;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(40, 23);
+            label3.Location = new Point(48, 23);
             label3.Name = "label3";
-            label3.Size = new Size(80, 15);
-            label3.TabIndex = 2;
+            label3.Size = new Size(103, 20);
+            label3.TabIndex = 1;
             label3.Text = "Data da Festa:";
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(127, 44);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 3;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(9, 74);
+            label4.Location = new Point(9, 85);
             label4.Name = "label4";
-            label4.Size = new Size(112, 15);
-            label4.TabIndex = 2;
+            label4.Size = new Size(142, 20);
+            label4.TabIndex = 6;
             label4.Text = "Horário de Término:";
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(127, 71);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 3;
             // 
             // tabControl1
             // 
@@ -135,6 +118,8 @@
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(btnCancelar);
+            tabPage1.Controls.Add(btnGravar);
             tabPage1.Controls.Add(groupBox2);
             tabPage1.Controls.Add(groupBox1);
             tabPage1.Location = new Point(4, 24);
@@ -145,18 +130,41 @@
             tabPage1.Text = "Dados da Festa";
             tabPage1.UseVisualStyleBackColor = true;
             // 
+            // btnCancelar
+            // 
+            btnCancelar.DialogResult = DialogResult.Cancel;
+            btnCancelar.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCancelar.Location = new Point(397, 319);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(75, 31);
+            btnCancelar.TabIndex = 10;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // btnGravar
+            // 
+            btnGravar.DialogResult = DialogResult.OK;
+            btnGravar.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnGravar.Location = new Point(321, 319);
+            btnGravar.Name = "btnGravar";
+            btnGravar.Size = new Size(75, 31);
+            btnGravar.TabIndex = 11;
+            btnGravar.Text = "Gravar";
+            btnGravar.UseVisualStyleBackColor = true;
+            // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(label6);
-            groupBox2.Controls.Add(label7);
-            groupBox2.Controls.Add(label9);
-            groupBox2.Controls.Add(label8);
-            groupBox2.Controls.Add(label5);
-            groupBox2.Controls.Add(textBox6);
-            groupBox2.Controls.Add(textBox7);
-            groupBox2.Controls.Add(textBox9);
-            groupBox2.Controls.Add(textBox8);
-            groupBox2.Controls.Add(textBox5);
+            groupBox2.Controls.Add(lblRua);
+            groupBox2.Controls.Add(lblEstado);
+            groupBox2.Controls.Add(lblNumero);
+            groupBox2.Controls.Add(lblBairro);
+            groupBox2.Controls.Add(lblCidade);
+            groupBox2.Controls.Add(txtRua);
+            groupBox2.Controls.Add(txtEstado);
+            groupBox2.Controls.Add(txtNumero);
+            groupBox2.Controls.Add(txtBairro);
+            groupBox2.Controls.Add(txtCidade);
+            groupBox2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             groupBox2.Location = new Point(6, 151);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(493, 149);
@@ -164,100 +172,129 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Dados do Endereço";
             // 
-            // label6
+            // lblRua
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(20, 54);
-            label6.Name = "label6";
-            label6.Size = new Size(30, 15);
-            label6.TabIndex = 2;
-            label6.Text = "Rua:";
+            lblRua.AutoSize = true;
+            lblRua.Location = new Point(20, 54);
+            lblRua.Name = "lblRua";
+            lblRua.Size = new Size(37, 20);
+            lblRua.TabIndex = 11;
+            lblRua.Text = "Rua:";
             // 
-            // label7
+            // lblEstado
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(243, 25);
-            label7.Name = "label7";
-            label7.Size = new Size(45, 15);
-            label7.TabIndex = 2;
-            label7.Text = "Estado:";
+            lblEstado.AutoSize = true;
+            lblEstado.Location = new Point(243, 25);
+            lblEstado.Name = "lblEstado";
+            lblEstado.Size = new Size(57, 20);
+            lblEstado.TabIndex = 2;
+            lblEstado.Text = "Estado:";
             // 
-            // label9
+            // lblNumero
             // 
-            label9.AutoSize = true;
-            label9.Location = new Point(253, 83);
-            label9.Name = "label9";
-            label9.Size = new Size(54, 15);
-            label9.TabIndex = 2;
-            label9.Text = "Número:";
+            lblNumero.AutoSize = true;
+            lblNumero.Location = new Point(243, 83);
+            lblNumero.Name = "lblNumero";
+            lblNumero.Size = new Size(66, 20);
+            lblNumero.TabIndex = 15;
+            lblNumero.Text = "Número:";
             // 
-            // label8
+            // lblBairro
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(9, 83);
-            label8.Name = "label8";
-            label8.Size = new Size(41, 15);
-            label8.TabIndex = 2;
-            label8.Text = "Bairro:";
+            lblBairro.AutoSize = true;
+            lblBairro.Location = new Point(9, 83);
+            lblBairro.Name = "lblBairro";
+            lblBairro.Size = new Size(52, 20);
+            lblBairro.TabIndex = 13;
+            lblBairro.Text = "Bairro:";
             // 
-            // label5
+            // lblCidade
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(3, 25);
-            label5.Name = "label5";
-            label5.Size = new Size(47, 15);
-            label5.TabIndex = 2;
-            label5.Text = "Cidade:";
+            lblCidade.AutoSize = true;
+            lblCidade.Location = new Point(3, 25);
+            lblCidade.Name = "lblCidade";
+            lblCidade.Size = new Size(59, 20);
+            lblCidade.TabIndex = 8;
+            lblCidade.Text = "Cidade:";
             // 
-            // textBox6
+            // txtRua
             // 
-            textBox6.Location = new Point(56, 51);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(431, 23);
-            textBox6.TabIndex = 3;
+            txtRua.Location = new Point(56, 51);
+            txtRua.Name = "txtRua";
+            txtRua.Size = new Size(431, 27);
+            txtRua.TabIndex = 7;
             // 
-            // textBox7
+            // txtEstado
             // 
-            textBox7.Location = new Point(306, 22);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(181, 23);
-            textBox7.TabIndex = 3;
+            txtEstado.Location = new Point(306, 22);
+            txtEstado.Name = "txtEstado";
+            txtEstado.Size = new Size(181, 27);
+            txtEstado.TabIndex = 6;
             // 
-            // textBox9
+            // txtNumero
             // 
-            textBox9.Location = new Point(306, 80);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(181, 23);
-            textBox9.TabIndex = 3;
+            txtNumero.Location = new Point(315, 80);
+            txtNumero.Name = "txtNumero";
+            txtNumero.Size = new Size(172, 27);
+            txtNumero.TabIndex = 9;
             // 
-            // textBox8
+            // txtBairro
             // 
-            textBox8.Location = new Point(56, 80);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(181, 23);
-            textBox8.TabIndex = 3;
+            txtBairro.Location = new Point(56, 80);
+            txtBairro.Name = "txtBairro";
+            txtBairro.Size = new Size(181, 27);
+            txtBairro.TabIndex = 8;
             // 
-            // textBox5
+            // txtCidade
             // 
-            textBox5.Location = new Point(56, 22);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(181, 23);
-            textBox5.TabIndex = 3;
+            txtCidade.Location = new Point(56, 22);
+            txtCidade.Name = "txtCidade";
+            txtCidade.Size = new Size(181, 27);
+            txtCidade.TabIndex = 5;
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(dateTimePicker3);
+            groupBox1.Controls.Add(dateTimePicker2);
+            groupBox1.Controls.Add(dateTimePicker1);
             groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(textBox2);
-            groupBox1.Controls.Add(textBox3);
             groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(textBox4);
             groupBox1.Controls.Add(label2);
+            groupBox1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             groupBox1.Location = new Point(3, 6);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(496, 139);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Data e Hora:";
+            // 
+            // dateTimePicker3
+            // 
+            dateTimePicker3.CustomFormat = "HH:mm";
+            dateTimePicker3.Format = DateTimePickerFormat.Custom;
+            dateTimePicker3.Location = new Point(157, 89);
+            dateTimePicker3.Name = "dateTimePicker3";
+            dateTimePicker3.ShowUpDown = true;
+            dateTimePicker3.Size = new Size(83, 27);
+            dateTimePicker3.TabIndex = 4;
+            // 
+            // dateTimePicker2
+            // 
+            dateTimePicker2.CustomFormat = "HH:mm";
+            dateTimePicker2.Format = DateTimePickerFormat.Custom;
+            dateTimePicker2.Location = new Point(157, 56);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.ShowUpDown = true;
+            dateTimePicker2.Size = new Size(83, 27);
+            dateTimePicker2.TabIndex = 3;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Format = DateTimePickerFormat.Short;
+            dateTimePicker1.Location = new Point(157, 23);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(114, 27);
+            dateTimePicker1.TabIndex = 2;
             // 
             // tabPage2
             // 
@@ -275,10 +312,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(557, 485);
             Controls.Add(tabControl1);
-            Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(lblId);
+            Controls.Add(txtId);
             DoubleBuffered = true;
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "TelaAluguelForm";
@@ -297,28 +334,30 @@
 
         #endregion
 
-        private TextBox textBox1;
-        private Label label1;
+        private TextBox txtId;
+        private Label lblId;
         private Label label2;
-        private TextBox textBox3;
         private Label label3;
-        private TextBox textBox4;
         private Label label4;
-        private TextBox textBox2;
         private TabControl tabControl1;
         private TabPage tabPage1;
         private TabPage tabPage2;
         private GroupBox groupBox1;
         private GroupBox groupBox2;
-        private Label label6;
-        private Label label7;
-        private Label label9;
-        private Label label8;
-        private Label label5;
-        private TextBox textBox6;
-        private TextBox textBox7;
-        private TextBox textBox9;
-        private TextBox textBox8;
-        private TextBox textBox5;
+        private Label lblRua;
+        private Label lblEstado;
+        private Label lblNumero;
+        private Label lblBairro;
+        private Label lblCidade;
+        private TextBox txtRua;
+        private TextBox txtEstado;
+        private TextBox txtNumero;
+        private TextBox txtBairro;
+        private TextBox txtCidade;
+        private DateTimePicker dateTimePicker3;
+        private DateTimePicker dateTimePicker2;
+        private DateTimePicker dateTimePicker1;
+        private Button btnCancelar;
+        private Button btnGravar;
     }
 }
