@@ -175,7 +175,7 @@
             // lblRua
             // 
             lblRua.AutoSize = true;
-            lblRua.Location = new Point(20, 54);
+            lblRua.Location = new Point(18, 62);
             lblRua.Name = "lblRua";
             lblRua.Size = new Size(37, 20);
             lblRua.TabIndex = 11;
@@ -193,7 +193,7 @@
             // lblNumero
             // 
             lblNumero.AutoSize = true;
-            lblNumero.Location = new Point(243, 83);
+            lblNumero.Location = new Point(243, 94);
             lblNumero.Name = "lblNumero";
             lblNumero.Size = new Size(66, 20);
             lblNumero.TabIndex = 15;
@@ -202,7 +202,7 @@
             // lblBairro
             // 
             lblBairro.AutoSize = true;
-            lblBairro.Location = new Point(9, 83);
+            lblBairro.Location = new Point(3, 94);
             lblBairro.Name = "lblBairro";
             lblBairro.Size = new Size(52, 20);
             lblBairro.TabIndex = 13;
@@ -211,15 +211,16 @@
             // lblCidade
             // 
             lblCidade.AutoSize = true;
-            lblCidade.Location = new Point(3, 25);
+            lblCidade.Location = new Point(-6, 25);
             lblCidade.Name = "lblCidade";
             lblCidade.Size = new Size(59, 20);
             lblCidade.TabIndex = 8;
             lblCidade.Text = "Cidade:";
+            lblCidade.Click += lblCidade_Click;
             // 
             // txtRua
             // 
-            txtRua.Location = new Point(56, 51);
+            txtRua.Location = new Point(56, 55);
             txtRua.Name = "txtRua";
             txtRua.Size = new Size(431, 27);
             txtRua.TabIndex = 7;
@@ -233,17 +234,18 @@
             // 
             // txtNumero
             // 
-            txtNumero.Location = new Point(315, 80);
+            txtNumero.Location = new Point(315, 91);
             txtNumero.Name = "txtNumero";
             txtNumero.Size = new Size(172, 27);
             txtNumero.TabIndex = 9;
             // 
             // txtBairro
             // 
-            txtBairro.Location = new Point(56, 80);
+            txtBairro.Location = new Point(56, 91);
             txtBairro.Name = "txtBairro";
             txtBairro.Size = new Size(181, 27);
             txtBairro.TabIndex = 8;
+            txtBairro.TextChanged += txtBairro_TextChanged;
             // 
             // txtCidade
             // 

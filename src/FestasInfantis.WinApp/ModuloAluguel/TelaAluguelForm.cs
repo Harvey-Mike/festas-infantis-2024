@@ -17,6 +17,14 @@ namespace FestasInfantis.WinApp.ModuloAluguel
             InitializeComponent();
         }
 
-        
+        private void txtBairro_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCidade_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
