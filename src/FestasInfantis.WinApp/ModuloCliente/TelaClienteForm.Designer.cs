@@ -45,9 +45,9 @@
             label1.AutoSize = true;
             label1.Location = new Point(84, 48);
             label1.Name = "label1";
-            label1.Size = new Size(20, 15);
+            label1.Size = new Size(21, 15);
             label1.TabIndex = 0;
-            label1.Text = "Id:";
+            label1.Text = "ID:";
             // 
             // txtId
             // 
@@ -57,6 +57,7 @@
             txtId.Size = new Size(42, 23);
             txtId.TabIndex = 1;
             txtId.Text = "0";
+            txtId.TextAlign = HorizontalAlignment.Right;
             // 
             // txtNome
             // 

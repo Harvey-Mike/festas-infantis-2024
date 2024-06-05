@@ -28,8 +28,6 @@ namespace FestasInfantis.WinApp.ModuloCliente
         }
         public TelaClienteForm()
         {
-
-
             InitializeComponent();
         }
 

@@ -54,7 +54,12 @@ namespace FestasInfantis.WinApp.ModuloCliente
 
         public override UserControl ObterListagem()
         {
-            throw new NotImplementedException();
+            if(tabelaCliente == null)
+                tabelaCliente = new TabelaClienteControl();
+
+            carregarClientes();
+
+            return tabelaCliente;
         }
     }
 }

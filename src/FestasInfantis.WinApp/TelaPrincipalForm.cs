@@ -17,7 +17,7 @@ namespace FestasInfantis.WinApp
             lblTipoCadastro.Text = string.Empty;
             Instancia = this;
             repositorioCliente = new RepositorioCliente();
-            
+
         }
 
         public void AtualizarRodape(string texto)
@@ -63,5 +63,11 @@ namespace FestasInfantis.WinApp
             pnlRegistros.Controls.Add(listagemContato);
         }
 
+        private void clientesMenuItem_Click(object sender, EventArgs e)
+        {
+            controlador = new ControladorCliente(repositorioCliente);
+
+            ConfigurarTelaPrincipal(controlador);
+        }
     }
 }
