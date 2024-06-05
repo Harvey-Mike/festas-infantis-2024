@@ -53,8 +53,8 @@
             dateTimePicker2 = new DateTimePicker();
             dateTimePicker1 = new DateTimePicker();
             tabPage2 = new TabPage();
-            label1 = new Label();
             label5 = new Label();
+            label1 = new Label();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -66,21 +66,23 @@
             // 
             txtId.Enabled = false;
             txtId.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtId.Location = new Point(67, 23);
+            txtId.Location = new Point(38, 18);
             txtId.Name = "txtId";
-            txtId.Size = new Size(54, 27);
+            txtId.Size = new Size(65, 27);
             txtId.TabIndex = 0;
             txtId.Text = "0";
+            txtId.TextChanged += txtId_TextChanged;
             // 
             // lblId
             // 
             lblId.AutoSize = true;
             lblId.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblId.Location = new Point(41, 26);
+            lblId.Location = new Point(12, 21);
             lblId.Name = "lblId";
             lblId.Size = new Size(25, 20);
             lblId.TabIndex = 1;
             lblId.Text = "Id:";
+            
             // 
             // label2
             // 
@@ -148,7 +150,7 @@
             // 
             btnGravar.DialogResult = DialogResult.OK;
             btnGravar.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnGravar.Location = new Point(321, 319);
+            btnGravar.Location = new Point(318, 319);
             btnGravar.Name = "btnGravar";
             btnGravar.Size = new Size(75, 31);
             btnGravar.TabIndex = 11;
@@ -168,9 +170,9 @@
             groupBox2.Controls.Add(txtBairro);
             groupBox2.Controls.Add(txtCidade);
             groupBox2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            groupBox2.Location = new Point(6, 151);
+            groupBox2.Location = new Point(3, 151);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(493, 149);
+            groupBox2.Size = new Size(496, 149);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "Dados do Endereço";
@@ -178,7 +180,7 @@
             // lblRua
             // 
             lblRua.AutoSize = true;
-            lblRua.Location = new Point(18, 62);
+            lblRua.Location = new Point(25, 62);
             lblRua.Name = "lblRua";
             lblRua.Size = new Size(37, 20);
             lblRua.TabIndex = 11;
@@ -187,7 +189,7 @@
             // lblEstado
             // 
             lblEstado.AutoSize = true;
-            lblEstado.Location = new Point(243, 25);
+            lblEstado.Location = new Point(252, 23);
             lblEstado.Name = "lblEstado";
             lblEstado.Size = new Size(57, 20);
             lblEstado.TabIndex = 2;
@@ -205,7 +207,7 @@
             // lblBairro
             // 
             lblBairro.AutoSize = true;
-            lblBairro.Location = new Point(3, 94);
+            lblBairro.Location = new Point(10, 94);
             lblBairro.Name = "lblBairro";
             lblBairro.Size = new Size(52, 20);
             lblBairro.TabIndex = 13;
@@ -214,7 +216,7 @@
             // lblCidade
             // 
             lblCidade.AutoSize = true;
-            lblCidade.Location = new Point(-3, 25);
+            lblCidade.Location = new Point(3, 25);
             lblCidade.Name = "lblCidade";
             lblCidade.Size = new Size(59, 20);
             lblCidade.TabIndex = 8;
@@ -223,16 +225,16 @@
             // 
             // txtRua
             // 
-            txtRua.Location = new Point(56, 55);
+            txtRua.Location = new Point(62, 55);
             txtRua.Name = "txtRua";
-            txtRua.Size = new Size(431, 27);
+            txtRua.Size = new Size(425, 27);
             txtRua.TabIndex = 7;
             // 
             // txtEstado
             // 
-            txtEstado.Location = new Point(306, 22);
+            txtEstado.Location = new Point(315, 22);
             txtEstado.Name = "txtEstado";
-            txtEstado.Size = new Size(181, 27);
+            txtEstado.Size = new Size(172, 27);
             txtEstado.TabIndex = 6;
             // 
             // txtNumero
@@ -244,17 +246,17 @@
             // 
             // txtBairro
             // 
-            txtBairro.Location = new Point(56, 91);
+            txtBairro.Location = new Point(62, 91);
             txtBairro.Name = "txtBairro";
-            txtBairro.Size = new Size(181, 27);
+            txtBairro.Size = new Size(175, 27);
             txtBairro.TabIndex = 8;
             txtBairro.TextChanged += txtBairro_TextChanged;
             // 
             // txtCidade
             // 
-            txtCidade.Location = new Point(56, 22);
+            txtCidade.Location = new Point(62, 22);
             txtCidade.Name = "txtCidade";
-            txtCidade.Size = new Size(181, 27);
+            txtCidade.Size = new Size(175, 27);
             txtCidade.TabIndex = 5;
             // 
             // groupBox1
@@ -266,9 +268,9 @@
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label2);
             groupBox1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            groupBox1.Location = new Point(3, 6);
+            groupBox1.Location = new Point(0, 6);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(496, 139);
+            groupBox1.Size = new Size(499, 139);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Data e Hora:";
@@ -280,7 +282,7 @@
             dateTimePicker3.Location = new Point(157, 89);
             dateTimePicker3.Name = "dateTimePicker3";
             dateTimePicker3.ShowUpDown = true;
-            dateTimePicker3.Size = new Size(83, 27);
+            dateTimePicker3.Size = new Size(68, 27);
             dateTimePicker3.TabIndex = 4;
             // 
             // dateTimePicker2
@@ -290,7 +292,7 @@
             dateTimePicker2.Location = new Point(157, 56);
             dateTimePicker2.Name = "dateTimePicker2";
             dateTimePicker2.ShowUpDown = true;
-            dateTimePicker2.Size = new Size(83, 27);
+            dateTimePicker2.Size = new Size(68, 27);
             dateTimePicker2.TabIndex = 3;
             // 
             // dateTimePicker1
@@ -313,15 +315,6 @@
             tabPage2.Text = "Dados do Alguel";
             tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(25, 27);
-            label1.Name = "label1";
-            label1.Size = new Size(44, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Cliente";
-            // 
             // label5
             // 
             label5.AutoSize = true;
@@ -330,6 +323,15 @@
             label5.Size = new Size(44, 15);
             label5.TabIndex = 0;
             label5.Text = "Cliente";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(25, 27);
+            label1.Name = "label1";
+            label1.Size = new Size(44, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Cliente";
             // 
             // TelaAluguelForm
             // 
