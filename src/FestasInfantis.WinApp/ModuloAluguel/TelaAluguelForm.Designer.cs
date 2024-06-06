@@ -48,18 +48,36 @@
             txtNumero = new TextBox();
             txtBairro = new TextBox();
             txtCidade = new TextBox();
-            groupBox1 = new GroupBox();
+            groupData = new GroupBox();
             dateTimePicker3 = new DateTimePicker();
             dateTimePicker2 = new DateTimePicker();
             dateTimePicker1 = new DateTimePicker();
             tabPage2 = new TabPage();
-            label5 = new Label();
-            label1 = new Label();
+            button1 = new Button();
+            button2 = new Button();
+            groupPagamento = new GroupBox();
+            lblValorPendente = new Label();
+            lblValorDesconto = new Label();
+            lblvalorSinal = new Label();
+            lblValorTema = new Label();
+            lblDesconto = new Label();
+            textBox5 = new TextBox();
+            textBox4 = new TextBox();
+            textBox3 = new TextBox();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
+            comboBox2 = new ComboBox();
+            comboBox3 = new ComboBox();
+            comboBox1 = new ComboBox();
+            lblSinal = new Label();
+            lblTema = new Label();
+            lblCliente = new Label();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             groupBox2.SuspendLayout();
-            groupBox1.SuspendLayout();
+            groupData.SuspendLayout();
             tabPage2.SuspendLayout();
+            groupPagamento.SuspendLayout();
             SuspendLayout();
             // 
             // txtId
@@ -82,7 +100,6 @@
             lblId.Size = new Size(25, 20);
             lblId.TabIndex = 1;
             lblId.Text = "Id:";
-            
             // 
             // label2
             // 
@@ -115,10 +132,10 @@
             // 
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
-            tabControl1.Location = new Point(12, 66);
+            tabControl1.Location = new Point(12, 62);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(534, 396);
+            tabControl1.Size = new Size(554, 400);
             tabControl1.TabIndex = 4;
             // 
             // tabPage1
@@ -126,11 +143,11 @@
             tabPage1.Controls.Add(btnCancelar);
             tabPage1.Controls.Add(btnGravar);
             tabPage1.Controls.Add(groupBox2);
-            tabPage1.Controls.Add(groupBox1);
+            tabPage1.Controls.Add(groupData);
             tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(526, 368);
+            tabPage1.Size = new Size(546, 372);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Dados da Festa";
             tabPage1.UseVisualStyleBackColor = true;
@@ -139,7 +156,7 @@
             // 
             btnCancelar.DialogResult = DialogResult.Cancel;
             btnCancelar.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnCancelar.Location = new Point(397, 319);
+            btnCancelar.Location = new Point(424, 319);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(75, 31);
             btnCancelar.TabIndex = 10;
@@ -150,7 +167,7 @@
             // 
             btnGravar.DialogResult = DialogResult.OK;
             btnGravar.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnGravar.Location = new Point(318, 319);
+            btnGravar.Location = new Point(345, 319);
             btnGravar.Name = "btnGravar";
             btnGravar.Size = new Size(75, 31);
             btnGravar.TabIndex = 11;
@@ -259,21 +276,21 @@
             txtCidade.Size = new Size(175, 27);
             txtCidade.TabIndex = 5;
             // 
-            // groupBox1
+            // groupData
             // 
-            groupBox1.Controls.Add(dateTimePicker3);
-            groupBox1.Controls.Add(dateTimePicker2);
-            groupBox1.Controls.Add(dateTimePicker1);
-            groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(label2);
-            groupBox1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            groupBox1.Location = new Point(0, 6);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(499, 139);
-            groupBox1.TabIndex = 0;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Data e Hora:";
+            groupData.Controls.Add(dateTimePicker3);
+            groupData.Controls.Add(dateTimePicker2);
+            groupData.Controls.Add(dateTimePicker1);
+            groupData.Controls.Add(label3);
+            groupData.Controls.Add(label4);
+            groupData.Controls.Add(label2);
+            groupData.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            groupData.Location = new Point(0, 6);
+            groupData.Name = "groupData";
+            groupData.Size = new Size(499, 139);
+            groupData.TabIndex = 0;
+            groupData.TabStop = false;
+            groupData.Text = "Data e Hora:";
             // 
             // dateTimePicker3
             // 
@@ -305,39 +322,210 @@
             // 
             // tabPage2
             // 
-            tabPage2.Controls.Add(label5);
-            tabPage2.Controls.Add(label1);
+            tabPage2.Controls.Add(button1);
+            tabPage2.Controls.Add(button2);
+            tabPage2.Controls.Add(groupPagamento);
+            tabPage2.Controls.Add(comboBox2);
+            tabPage2.Controls.Add(comboBox3);
+            tabPage2.Controls.Add(comboBox1);
+            tabPage2.Controls.Add(lblSinal);
+            tabPage2.Controls.Add(lblTema);
+            tabPage2.Controls.Add(lblCliente);
+            tabPage2.Font = new Font("Segoe UI", 11.25F);
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(526, 368);
+            tabPage2.Size = new Size(546, 372);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Dados do Alguel";
             tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // button1
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(25, 54);
-            label5.Name = "label5";
-            label5.Size = new Size(44, 15);
-            label5.TabIndex = 0;
-            label5.Text = "Cliente";
+            button1.AutoSize = true;
+            button1.DialogResult = DialogResult.Cancel;
+            button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(448, 335);
+            button1.Name = "button1";
+            button1.Size = new Size(76, 31);
+            button1.TabIndex = 12;
+            button1.Text = "Cancelar";
+            button1.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // button2
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(25, 27);
-            label1.Name = "label1";
-            label1.Size = new Size(44, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Cliente";
+            button2.DialogResult = DialogResult.OK;
+            button2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.Location = new Point(369, 335);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 31);
+            button2.TabIndex = 13;
+            button2.Text = "Gravar";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // groupPagamento
+            // 
+            groupPagamento.Controls.Add(lblValorPendente);
+            groupPagamento.Controls.Add(lblValorDesconto);
+            groupPagamento.Controls.Add(lblvalorSinal);
+            groupPagamento.Controls.Add(lblValorTema);
+            groupPagamento.Controls.Add(lblDesconto);
+            groupPagamento.Controls.Add(textBox5);
+            groupPagamento.Controls.Add(textBox4);
+            groupPagamento.Controls.Add(textBox3);
+            groupPagamento.Controls.Add(textBox2);
+            groupPagamento.Controls.Add(textBox1);
+            groupPagamento.Location = new Point(22, 124);
+            groupPagamento.Name = "groupPagamento";
+            groupPagamento.Size = new Size(498, 186);
+            groupPagamento.TabIndex = 2;
+            groupPagamento.TabStop = false;
+            groupPagamento.Text = "Dados de Pagamento:";
+            // 
+            // lblValorPendente
+            // 
+            lblValorPendente.AutoSize = true;
+            lblValorPendente.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblValorPendente.Location = new Point(242, 134);
+            lblValorPendente.Name = "lblValorPendente";
+            lblValorPendente.Size = new Size(99, 17);
+            lblValorPendente.TabIndex = 10;
+            lblValorPendente.Text = "Valor Pendente:";
+            // 
+            // lblValorDesconto
+            // 
+            lblValorDesconto.AutoSize = true;
+            lblValorDesconto.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblValorDesconto.Location = new Point(243, 29);
+            lblValorDesconto.Name = "lblValorDesconto";
+            lblValorDesconto.Size = new Size(98, 85);
+            lblValorDesconto.TabIndex = 10;
+            lblValorDesconto.Text = "\r\n\r\n\r\nValor do Tema\r\n com desconto:\r\n";
+            // 
+            // lblvalorSinal
+            // 
+            lblvalorSinal.AutoSize = true;
+            lblvalorSinal.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblvalorSinal.Location = new Point(14, 134);
+            lblvalorSinal.Name = "lblvalorSinal";
+            lblvalorSinal.Size = new Size(92, 17);
+            lblvalorSinal.TabIndex = 10;
+            lblvalorSinal.Text = "Valor do Sinal:";
+            // 
+            // lblValorTema
+            // 
+            lblValorTema.AutoSize = true;
+            lblValorTema.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblValorTema.Location = new Point(14, 91);
+            lblValorTema.Name = "lblValorTema";
+            lblValorTema.Size = new Size(96, 17);
+            lblValorTema.TabIndex = 10;
+            lblValorTema.Text = "Valor do Tema:";
+            // 
+            // lblDesconto
+            // 
+            lblDesconto.AutoSize = true;
+            lblDesconto.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDesconto.Location = new Point(6, 59);
+            lblDesconto.Name = "lblDesconto";
+            lblDesconto.Size = new Size(100, 17);
+            lblDesconto.TabIndex = 10;
+            lblDesconto.Text = "% de Desconto:";
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(347, 129);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(93, 27);
+            textBox5.TabIndex = 9;
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(347, 86);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(93, 27);
+            textBox4.TabIndex = 9;
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(112, 126);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(104, 27);
+            textBox3.TabIndex = 9;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(112, 87);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(104, 27);
+            textBox2.TabIndex = 9;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(112, 54);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(45, 27);
+            textBox1.TabIndex = 9;
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(86, 65);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(187, 28);
+            comboBox2.TabIndex = 1;
+            // 
+            // comboBox3
+            // 
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Location = new Point(345, 31);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new Size(175, 28);
+            comboBox3.TabIndex = 1;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(86, 31);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(187, 28);
+            comboBox1.TabIndex = 1;
+            // 
+            // lblSinal
+            // 
+            lblSinal.AutoSize = true;
+            lblSinal.Font = new Font("Segoe UI", 11.25F);
+            lblSinal.Location = new Point(36, 66);
+            lblSinal.Name = "lblSinal";
+            lblSinal.Size = new Size(44, 20);
+            lblSinal.TabIndex = 0;
+            lblSinal.Text = "Sinal:";
+            // 
+            // lblTema
+            // 
+            lblTema.AutoSize = true;
+            lblTema.Font = new Font("Segoe UI", 11.25F);
+            lblTema.Location = new Point(291, 34);
+            lblTema.Name = "lblTema";
+            lblTema.Size = new Size(48, 20);
+            lblTema.TabIndex = 0;
+            lblTema.Text = "Tema:";
+            // 
+            // lblCliente
+            // 
+            lblCliente.AutoSize = true;
+            lblCliente.Font = new Font("Segoe UI", 11.25F);
+            lblCliente.Location = new Point(22, 34);
+            lblCliente.Name = "lblCliente";
+            lblCliente.Size = new Size(58, 20);
+            lblCliente.TabIndex = 0;
+            lblCliente.Text = "Cliente:";
             // 
             // TelaAluguelForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(557, 485);
+            ClientSize = new Size(606, 473);
             Controls.Add(tabControl1);
             Controls.Add(lblId);
             Controls.Add(txtId);
@@ -353,10 +541,12 @@
             tabPage1.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
+            groupData.ResumeLayout(false);
+            groupData.PerformLayout();
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
+            groupPagamento.ResumeLayout(false);
+            groupPagamento.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -371,7 +561,7 @@
         private TabControl tabControl1;
         private TabPage tabPage1;
         private TabPage tabPage2;
-        private GroupBox groupBox1;
+        private GroupBox groupData;
         private GroupBox groupBox2;
         private Label lblRua;
         private Label lblEstado;
@@ -388,7 +578,24 @@
         private DateTimePicker dateTimePicker1;
         private Button btnCancelar;
         private Button btnGravar;
-        private Label label1;
-        private Label label5;
+        private Label lblCliente;
+        private Label lblSinal;
+        private Label lblTema;
+        private ComboBox comboBox2;
+        private ComboBox comboBox3;
+        private ComboBox comboBox1;
+        private GroupBox groupPagamento;
+        private Label lblValorPendente;
+        private Label lblValorDesconto;
+        private Label lblvalorSinal;
+        private Label lblValorTema;
+        private Label lblDesconto;
+        private TextBox textBox5;
+        private TextBox textBox4;
+        private TextBox textBox3;
+        private TextBox textBox2;
+        private TextBox textBox1;
+        private Button button1;
+        private Button button2;
     }
 }
