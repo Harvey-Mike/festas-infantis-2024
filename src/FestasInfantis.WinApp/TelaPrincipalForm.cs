@@ -69,5 +69,10 @@ namespace FestasInfantis.WinApp
 
             ConfigurarTelaPrincipal(controlador);
         }
+
+        private void btnAdicionar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

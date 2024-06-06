@@ -30,14 +30,14 @@
         {
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            txtNome = new TextBox();
+            label2 = new Label();
+            txtId = new TextBox();
+            label1 = new Label();
             tabPage2 = new TabPage();
             btnGravar = new Button();
             btnCancelar = new Button();
-            label1 = new Label();
-            txtId = new TextBox();
-            txtNome = new TextBox();
-            label2 = new Label();
-            listBox1 = new ListBox();
+            checkedListBox1 = new CheckedListBox();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
@@ -67,9 +67,43 @@
             tabPage1.Text = "Dados Básicos";
             tabPage1.UseVisualStyleBackColor = true;
             // 
+            // txtNome
+            // 
+            txtNome.Location = new Point(80, 63);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(304, 23);
+            txtNome.TabIndex = 2;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(36, 66);
+            label2.Name = "label2";
+            label2.Size = new Size(43, 15);
+            label2.TabIndex = 5;
+            label2.Text = "Nome:";
+            // 
+            // txtId
+            // 
+            txtId.Enabled = false;
+            txtId.Location = new Point(80, 26);
+            txtId.Name = "txtId";
+            txtId.Size = new Size(61, 23);
+            txtId.TabIndex = 1;
+            txtId.Text = "0";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(54, 29);
+            label1.Name = "label1";
+            label1.Size = new Size(20, 15);
+            label1.TabIndex = 3;
+            label1.Text = "Id:";
+            // 
             // tabPage2
             // 
-            tabPage2.Controls.Add(listBox1);
+            tabPage2.Controls.Add(checkedListBox1);
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
@@ -96,49 +130,14 @@
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // checkedListBox1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(54, 29);
-            label1.Name = "label1";
-            label1.Size = new Size(20, 15);
-            label1.TabIndex = 3;
-            label1.Text = "Id:";
-            // 
-            // txtId
-            // 
-            txtId.Enabled = false;
-            txtId.Location = new Point(80, 26);
-            txtId.Name = "txtId";
-            txtId.Size = new Size(61, 23);
-            txtId.TabIndex = 1;
-            txtId.Text = "0";
-            // 
-            // txtNome
-            // 
-            txtNome.Location = new Point(80, 63);
-            txtNome.Name = "txtNome";
-            txtNome.Size = new Size(304, 23);
-            txtNome.TabIndex = 2;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(36, 66);
-            label2.Name = "label2";
-            label2.Size = new Size(43, 15);
-            label2.TabIndex = 5;
-            label2.Text = "Nome:";
-            // 
-            // listBox1
-            // 
-            listBox1.Dock = DockStyle.Fill;
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(3, 3);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(478, 281);
-            listBox1.TabIndex = 0;
+            checkedListBox1.Dock = DockStyle.Fill;
+            checkedListBox1.FormattingEnabled = true;
+            checkedListBox1.Location = new Point(3, 3);
+            checkedListBox1.Name = "checkedListBox1";
+            checkedListBox1.Size = new Size(478, 281);
+            checkedListBox1.TabIndex = 0;
             // 
             // TelaTemaForm
             // 
@@ -171,6 +170,6 @@
         private TextBox txtNome;
         private Label label2;
         private TextBox txtId;
-        private ListBox listBox1;
+        private CheckedListBox checkedListBox1;
     }
 }
