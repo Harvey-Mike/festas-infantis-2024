@@ -28,11 +28,14 @@ namespace FestasInfantis.WinApp.ModuloCliente
         {
             TelaClienteForm telaCliente = new TelaClienteForm();
             DialogResult resultado = telaCliente.ShowDialog();
-            if (resultado == DialogResult.OK) return;
+            if (resultado == DialogResult.OK)
+            {
+                Cliente novoCliente = telaCliente.Cliente;
+                repositorioCliente.Cadastrar(novoCliente);
+                carregarClientes();
+            }
 
-            Cliente novoCliente = telaCliente.Cliente;
-            repositorioCliente.Cadastrar(novoCliente);
-            carregarClientes();
+            
         }
 
         private void carregarClientes()

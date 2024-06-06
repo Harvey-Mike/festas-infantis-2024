@@ -72,7 +72,7 @@ namespace FestasInfantis.WinApp
 
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
-
+            controlador.Adicionar();
         }
     }
 }

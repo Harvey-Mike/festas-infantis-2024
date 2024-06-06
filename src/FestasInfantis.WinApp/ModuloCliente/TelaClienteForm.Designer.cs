@@ -102,15 +102,18 @@
             // 
             // btnGravar
             // 
+            btnGravar.DialogResult = DialogResult.OK;
             btnGravar.Location = new Point(374, 182);
             btnGravar.Name = "btnGravar";
             btnGravar.Size = new Size(88, 51);
             btnGravar.TabIndex = 5;
             btnGravar.Text = "Gravar";
             btnGravar.UseVisualStyleBackColor = true;
+            btnGravar.Click += btnGravar_Click;
             // 
             // btnCancelar
             // 
+            btnCancelar.DialogResult = DialogResult.Cancel;
             btnCancelar.Location = new Point(469, 182);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(88, 51);

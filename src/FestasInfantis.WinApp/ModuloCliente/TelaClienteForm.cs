@@ -31,7 +31,7 @@ namespace FestasInfantis.WinApp.ModuloCliente
             InitializeComponent();
         }
 
-        private TelaClienteForm(object sender,EventArgs e)
+        private void btnGravar_Click(object sender, EventArgs e)
         {
             string nome = txtNome.Text;
             string telefone = txtTelefone.Text;
