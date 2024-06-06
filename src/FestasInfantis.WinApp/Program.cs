@@ -1,4 +1,5 @@
 using FestasInfantis.WinApp.ModuloAluguel;
+using FestasInfantis.WinApp.ModuloItem;
 
 namespace FestasInfantis.WinApp
 {

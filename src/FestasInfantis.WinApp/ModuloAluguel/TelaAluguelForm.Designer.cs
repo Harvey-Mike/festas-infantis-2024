@@ -66,9 +66,9 @@
             textBox3 = new TextBox();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
-            comboBox2 = new ComboBox();
-            comboBox3 = new ComboBox();
-            comboBox1 = new ComboBox();
+            cmbSinal = new ComboBox();
+            cmbTema = new ComboBox();
+            cmbCliente = new ComboBox();
             lblSinal = new Label();
             lblTema = new Label();
             lblCliente = new Label();
@@ -135,7 +135,7 @@
             tabControl1.Location = new Point(12, 62);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(554, 400);
+            tabControl1.Size = new Size(542, 375);
             tabControl1.TabIndex = 4;
             // 
             // tabPage1
@@ -147,7 +147,7 @@
             tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(546, 372);
+            tabPage1.Size = new Size(534, 347);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Dados da Festa";
             tabPage1.UseVisualStyleBackColor = true;
@@ -156,10 +156,10 @@
             // 
             btnCancelar.DialogResult = DialogResult.Cancel;
             btnCancelar.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnCancelar.Location = new Point(424, 319);
+            btnCancelar.Location = new Point(427, 310);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(75, 31);
-            btnCancelar.TabIndex = 10;
+            btnCancelar.TabIndex = 8;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
             // 
@@ -167,10 +167,10 @@
             // 
             btnGravar.DialogResult = DialogResult.OK;
             btnGravar.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnGravar.Location = new Point(345, 319);
+            btnGravar.Location = new Point(346, 310);
             btnGravar.Name = "btnGravar";
             btnGravar.Size = new Size(75, 31);
-            btnGravar.TabIndex = 11;
+            btnGravar.TabIndex = 9;
             btnGravar.Text = "Gravar";
             btnGravar.UseVisualStyleBackColor = true;
             // 
@@ -245,28 +245,28 @@
             txtRua.Location = new Point(62, 55);
             txtRua.Name = "txtRua";
             txtRua.Size = new Size(425, 27);
-            txtRua.TabIndex = 7;
+            txtRua.TabIndex = 5;
             // 
             // txtEstado
             // 
             txtEstado.Location = new Point(315, 22);
             txtEstado.Name = "txtEstado";
             txtEstado.Size = new Size(172, 27);
-            txtEstado.TabIndex = 6;
+            txtEstado.TabIndex = 4;
             // 
             // txtNumero
             // 
             txtNumero.Location = new Point(315, 91);
             txtNumero.Name = "txtNumero";
             txtNumero.Size = new Size(172, 27);
-            txtNumero.TabIndex = 9;
+            txtNumero.TabIndex = 7;
             // 
             // txtBairro
             // 
             txtBairro.Location = new Point(62, 91);
             txtBairro.Name = "txtBairro";
             txtBairro.Size = new Size(175, 27);
-            txtBairro.TabIndex = 8;
+            txtBairro.TabIndex = 6;
             txtBairro.TextChanged += txtBairro_TextChanged;
             // 
             // txtCidade
@@ -274,7 +274,7 @@
             txtCidade.Location = new Point(62, 22);
             txtCidade.Name = "txtCidade";
             txtCidade.Size = new Size(175, 27);
-            txtCidade.TabIndex = 5;
+            txtCidade.TabIndex = 3;
             // 
             // groupData
             // 
@@ -300,7 +300,7 @@
             dateTimePicker3.Name = "dateTimePicker3";
             dateTimePicker3.ShowUpDown = true;
             dateTimePicker3.Size = new Size(68, 27);
-            dateTimePicker3.TabIndex = 4;
+            dateTimePicker3.TabIndex = 2;
             // 
             // dateTimePicker2
             // 
@@ -310,7 +310,7 @@
             dateTimePicker2.Name = "dateTimePicker2";
             dateTimePicker2.ShowUpDown = true;
             dateTimePicker2.Size = new Size(68, 27);
-            dateTimePicker2.TabIndex = 3;
+            dateTimePicker2.TabIndex = 1;
             // 
             // dateTimePicker1
             // 
@@ -318,16 +318,16 @@
             dateTimePicker1.Location = new Point(157, 23);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(114, 27);
-            dateTimePicker1.TabIndex = 2;
+            dateTimePicker1.TabIndex = 0;
             // 
             // tabPage2
             // 
             tabPage2.Controls.Add(button1);
             tabPage2.Controls.Add(button2);
             tabPage2.Controls.Add(groupPagamento);
-            tabPage2.Controls.Add(comboBox2);
-            tabPage2.Controls.Add(comboBox3);
-            tabPage2.Controls.Add(comboBox1);
+            tabPage2.Controls.Add(cmbSinal);
+            tabPage2.Controls.Add(cmbTema);
+            tabPage2.Controls.Add(cmbCliente);
             tabPage2.Controls.Add(lblSinal);
             tabPage2.Controls.Add(lblTema);
             tabPage2.Controls.Add(lblCliente);
@@ -335,7 +335,7 @@
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(546, 372);
+            tabPage2.Size = new Size(534, 347);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Dados do Alguel";
             tabPage2.UseVisualStyleBackColor = true;
@@ -345,21 +345,22 @@
             button1.AutoSize = true;
             button1.DialogResult = DialogResult.Cancel;
             button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(448, 335);
+            button1.Location = new Point(444, 302);
             button1.Name = "button1";
             button1.Size = new Size(76, 31);
-            button1.TabIndex = 12;
+            button1.TabIndex = 8;
             button1.Text = "Cancelar";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
             button2.DialogResult = DialogResult.OK;
             button2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.Location = new Point(369, 335);
+            button2.Location = new Point(365, 302);
             button2.Name = "button2";
             button2.Size = new Size(75, 31);
-            button2.TabIndex = 13;
+            button2.TabIndex = 9;
             button2.Text = "Gravar";
             button2.UseVisualStyleBackColor = true;
             // 
@@ -375,12 +376,13 @@
             groupPagamento.Controls.Add(textBox3);
             groupPagamento.Controls.Add(textBox2);
             groupPagamento.Controls.Add(textBox1);
-            groupPagamento.Location = new Point(22, 124);
+            groupPagamento.Location = new Point(22, 110);
             groupPagamento.Name = "groupPagamento";
             groupPagamento.Size = new Size(498, 186);
             groupPagamento.TabIndex = 2;
             groupPagamento.TabStop = false;
             groupPagamento.Text = "Dados de Pagamento:";
+            groupPagamento.Enter += groupPagamento_Enter;
             // 
             // lblValorPendente
             // 
@@ -437,59 +439,63 @@
             textBox5.Location = new Point(347, 129);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(93, 27);
-            textBox5.TabIndex = 9;
+            textBox5.TabIndex = 7;
             // 
             // textBox4
             // 
             textBox4.Location = new Point(347, 86);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(93, 27);
-            textBox4.TabIndex = 9;
+            textBox4.TabIndex = 5;
             // 
             // textBox3
             // 
             textBox3.Location = new Point(112, 126);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(104, 27);
-            textBox3.TabIndex = 9;
+            textBox3.TabIndex = 6;
             // 
             // textBox2
             // 
             textBox2.Location = new Point(112, 87);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(104, 27);
-            textBox2.TabIndex = 9;
+            textBox2.TabIndex = 4;
             // 
             // textBox1
             // 
             textBox1.Location = new Point(112, 54);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(45, 27);
-            textBox1.TabIndex = 9;
+            textBox1.TabIndex = 3;
             // 
-            // comboBox2
+            // cmbSinal
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(86, 65);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(187, 28);
-            comboBox2.TabIndex = 1;
+            cmbSinal.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbSinal.FormattingEnabled = true;
+            cmbSinal.Location = new Point(86, 66);
+            cmbSinal.Name = "cmbSinal";
+            cmbSinal.Size = new Size(187, 28);
+            cmbSinal.TabIndex = 2;
             // 
-            // comboBox3
+            // cmbTema
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(345, 31);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(175, 28);
-            comboBox3.TabIndex = 1;
+            cmbTema.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbTema.FormattingEnabled = true;
+            cmbTema.Location = new Point(345, 31);
+            cmbTema.Name = "cmbTema";
+            cmbTema.Size = new Size(175, 28);
+            cmbTema.TabIndex = 1;
             // 
-            // comboBox1
+            // cmbCliente
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(86, 31);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(187, 28);
-            comboBox1.TabIndex = 1;
+            cmbCliente.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbCliente.FormattingEnabled = true;
+            cmbCliente.Items.AddRange(new object[] { "israel ", "kauã" });
+            cmbCliente.Location = new Point(86, 31);
+            cmbCliente.Name = "cmbCliente";
+            cmbCliente.Size = new Size(187, 28);
+            cmbCliente.TabIndex = 0;
             // 
             // lblSinal
             // 
@@ -525,7 +531,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(606, 473);
+            ClientSize = new Size(569, 448);
             Controls.Add(tabControl1);
             Controls.Add(lblId);
             Controls.Add(txtId);
@@ -581,9 +587,9 @@
         private Label lblCliente;
         private Label lblSinal;
         private Label lblTema;
-        private ComboBox comboBox2;
-        private ComboBox comboBox3;
-        private ComboBox comboBox1;
+        private ComboBox cmbSinal;
+        private ComboBox cmbTema;
+        private ComboBox cmbCliente;
         private GroupBox groupPagamento;
         private Label lblValorPendente;
         private Label lblValorDesconto;

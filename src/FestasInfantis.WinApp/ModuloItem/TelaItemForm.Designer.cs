@@ -126,6 +126,7 @@
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterParent;
             Text = "Cadastro de Itens";
+            
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ResumeLayout(false);
             PerformLayout();
