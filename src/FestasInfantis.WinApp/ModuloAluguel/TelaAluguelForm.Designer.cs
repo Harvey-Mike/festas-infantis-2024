@@ -72,6 +72,7 @@
             lblSinal = new Label();
             lblTema = new Label();
             lblCliente = new Label();
+            button3 = new Button();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -366,6 +367,7 @@
             // 
             // groupPagamento
             // 
+            groupPagamento.Controls.Add(button3);
             groupPagamento.Controls.Add(lblValorPendente);
             groupPagamento.Controls.Add(lblValorDesconto);
             groupPagamento.Controls.Add(lblvalorSinal);
@@ -379,7 +381,7 @@
             groupPagamento.Location = new Point(22, 110);
             groupPagamento.Name = "groupPagamento";
             groupPagamento.Size = new Size(498, 186);
-            groupPagamento.TabIndex = 2;
+            groupPagamento.TabIndex = 100;
             groupPagamento.TabStop = false;
             groupPagamento.Text = "Dados de Pagamento:";
             groupPagamento.Enter += groupPagamento_Enter;
@@ -527,6 +529,16 @@
             lblCliente.TabIndex = 0;
             lblCliente.Text = "Cliente:";
             // 
+            // button3
+            // 
+            button3.Location = new Point(219, 21);
+            button3.Name = "button3";
+            button3.Size = new Size(75, 32);
+            button3.TabIndex = 11;
+            button3.Text = "Calcular";
+            button3.UseVisualStyleBackColor = true;
+           
+            // 
             // TelaAluguelForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -603,5 +615,6 @@
         private TextBox textBox1;
         private Button button1;
         private Button button2;
+        private Button button3;
     }
 }

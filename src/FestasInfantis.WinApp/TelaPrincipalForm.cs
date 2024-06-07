@@ -74,5 +74,10 @@ namespace FestasInfantis.WinApp
         {
             controlador.Adicionar();
         }
+
+        private void itensToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
