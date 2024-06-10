@@ -72,7 +72,7 @@ namespace FestasInfantis.WinApp
 
         private void temasMenuItem_Click(object sender, EventArgs e)
         {
-
+            controlador = new ControladorTema();
         }
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
@@ -87,7 +87,6 @@ namespace FestasInfantis.WinApp
         {
             controlador.Excluir();
         }
-
 
     }
 }
