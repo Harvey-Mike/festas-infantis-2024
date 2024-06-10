@@ -35,7 +35,6 @@ namespace FestasInfantis.WinApp.ModuloCliente
                 carregarClientes();
             }
 
-            
         }
 
         private void carregarClientes()
@@ -47,12 +46,77 @@ namespace FestasInfantis.WinApp.ModuloCliente
 
         public override void Editar()
         {
-            throw new NotImplementedException();
+            TelaClienteForm telaCliente = new TelaClienteForm();
+
+            int idSelecionado = tabelaCliente.ObterRegistroSelecionado();
+
+            Cliente clienteSelecionado =
+                repositorioCliente.SelecionarPorId(idSelecionado);
+
+            if (clienteSelecionado == null)
+            {
+                MessageBox.Show(
+                    "Não é possível realizar esta ação sem um registro selecionado.",
+                    "Aviso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+
+            telaCliente.Cliente = clienteSelecionado;
+
+            DialogResult resultado = telaCliente.ShowDialog();
+
+            if (resultado != DialogResult.OK)
+                return;
+
+            Cliente clienteEditado = telaCliente.Cliente;
+
+            repositorioCliente.Editar(clienteSelecionado.Id, clienteEditado);
+
+            CarregarClientes();
+
+            TelaPrincipalForm
+                .Instancia
+                .AtualizarRodape($"O registro \"{clienteEditado.Nome}\" foi editado com sucesso!");
         }
 
         public override void Excluir()
         {
-            throw new NotImplementedException();
+            int idSelecionado = tabelaCliente.ObterRegistroSelecionado();
+
+            Cliente clienteSelecionado =
+                repositorioCliente.SelecionarPorId(idSelecionado);
+
+            if (clienteSelecionado == null)
+            {
+                MessageBox.Show(
+                    "Não é possível realizar esta ação sem um registro selecionado.",
+                    "Aviso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+
+            DialogResult resposta = MessageBox.Show(
+                $"Você deseja realmente excluir o registro \"{clienteSelecionado.Nome}\"?",
+                "Confirmar Exclusão",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            );
+
+            if (resposta != DialogResult.Yes)
+                return;
+
+            repositorioCliente.Excluir(clienteSelecionado.Id);
+
+            CarregarClientes();
+
+            TelaPrincipalForm
+                .Instancia
+                .AtualizarRodape($"O registro \"{clienteSelecionado.Nome}\" foi excluído com sucesso!");
         }
 
         public override UserControl ObterListagem()
@@ -63,6 +127,13 @@ namespace FestasInfantis.WinApp.ModuloCliente
             carregarClientes();
 
             return tabelaCliente;
+        }
+
+        private void CarregarClientes()
+        {
+            List<Cliente> clientes = repositorioCliente.SelecionarTodos();
+
+            tabelaCliente.AtualizarRegistros(clientes);
         }
     }
 }
